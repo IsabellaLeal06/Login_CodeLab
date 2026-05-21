@@ -1,102 +1,168 @@
+/* Reset básico para manter consistência visual entre navegadores */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    font-family: 'Archivo';
-    background-color: #ffffff;
+/* Estrutura principal da página */
+body {
+  display: flex;
+  font-family: "Archivo";
+  background-color: #ffffff;
 }
 
-.content{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;   border: blue solid 1px;
+/* Container central responsável pelo alinhamento do conteúdo */
+.content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-.img{
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;   border: red solid 1px;
-}
-.img > img{
-    max-width: 500px;
+/* Área da imagem ilustrativa */
+.img {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
-.left{
-    border: red solid 1px;
-    width: 50%;
-    background-color: #F3FFF2;
+/* Responsividade da imagem */
+.img > img {
+  max-width: 450px;
 }
 
-.right{
-    flex-direction: column;
-    display: flex;
-    width: 50%;   
-    justify-content: center;
-    align-items: center;
-    border: red solid 1px;
+/* Lado esquerdo com destaque visual */
+.left {
+  width: 50%;
+  background-color: #f3fff2;
 }
 
-h1{
-    font-size: 20px;
-    font-weight: 450;
+/* Área principal do formulário de login */
+.right {
+  flex-direction: column;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-h2{
-    font-size: 26px;
-    font-weight: 550;
+/* Títulos para hierarquia visual e SEO */
+h1 {
+  font-size: 20px;
+  font-weight: 450;
 }
 
-form{
-    flex-direction: column;
-    display: flex;
-    max-width: 50%;
-    gap: 20px;
-    color: #1A202C;
-    border: black solid;
+h2 {
+  font-size: 26px;
+  font-weight: 550;
 }
 
-input{
-    min-height: 35px;
-    background-color: #F7FAFC;
-    border: 1px solid #E8E8E8;
+/* Estrutura do formulário */
+form {
+  flex-direction: column;
+  display: flex;
+  min-width: 45%;
+  gap: 20px;
+  color: #1a202c;
+  min-height: 50vh;
 }
 
-#checkbox{
-    min-height: 15px;
-    min-width: 15px;
+/* Campos de entrada com foco em acessibilidade e usabilidade */
+input {
+  min-height: 35px;
+  background-color: #f7fafc;
+  border: 1px solid #e8e8e8;
+  padding: 10px;
 }
 
-.title > h2{
-    padding-top: 10px;
+/* Checkbox personalizado */
+#checkbox {
+  min-height: 15px;
+  min-width: 15px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-
-button{
-    min-height: 45px;
-    color: #ffffff;
-    font-size: 16px;
-    border: none;
-    font-family: 'Archivo';
-    text-align: center;
-}
-#submit{
-    background-color: #1E9E6A;
+/* Espaçamento do título secundário */
+.title > h2 {
+  padding-top: 10px;
 }
 
+/* Área "Lembrar de mim" */
+.remember {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilização padrão dos botões */
+button {
+  min-height: 45px;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 3px;
+  border: none;
+  font-family: "Archivo";
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Botão principal de login */
+#submit {
+  background-color: #1e9e6a;
+}
+
+/* Ícone do login Google */
 .login-google > img {
-    max-width: 20px;
-
+  max-width: 20px;
+  margin-right: 10px;
 }
 
-.login-google{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Botão de login com Google */
+.login-google {
+  background-color: #1a202c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Área das opções do formulário */
+.options {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Sessão de criação de conta */
+.createAccount {
+  text-align: center;
+}
+
+/* Espaçamento do label do checkbox */
+.remember > label {
+  margin-right: 10px;
+}
+
+/* Remove sublinhado dos links */
+a {
+  text-decoration: none;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 960px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    min-width: 100vw;
+  }
+
+  form {
+    min-width: 50vw;
+  }
 }

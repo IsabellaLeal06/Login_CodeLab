@@ -2,48 +2,95 @@
 <html lang="pt-br">
 
 <head>
+  <!-- Configuração de caracteres e responsividade -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título otimizado para SEO -->
   <title>Login | CodeLab</title>
+
+  <!-- Importação de ícones do Google -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+  <!-- Pré-conexão para melhor performance no carregamento das fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Importação das fontes utilizadas no projeto -->
   <link
     href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap"
     rel="stylesheet" />
+
+  <!-- Arquivo CSS principal -->
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+
+  <!-- Conteúdo principal da página -->
   <main>
     <div class="content">
+
+      <!-- Área lateral com imagem ilustrativa -->
       <section class="left">
         <div class="img">
-          <img src="./img/vetor.svg" alt="" />
+          <img src="./img/vetor.svg" alt="Imagem ilustrativa de login" />
         </div>
       </section>
-      <section class="right">
-        
 
+      <!-- Área principal do formulário -->
+      <section class="right">
+
+        <!-- Formulário de autenticação -->
         <form action="">
+
+          <!-- Títulos principais da página -->
           <div class="title">
-          <h1>Bem-vindo de volta</h1>
-          <h2>Faça login na sua conta</h2>
-        </div>
+            <h1>Bem-vindo de volta</h1>
+            <h2>Faça login na sua conta</h2>
+          </div>
+
+          <!-- Campo de e-mail -->
           <label for="e-mail">E-mail:</label>
           <input type="email" name="e-mail" id="e-mail" placeholder="exemplo@gmail.com" style="color: #656769;" />
-          <label for="password">Senha:</label>
-          <input type="password" placeholder="0123456789" style="color: #656769;"/>
 
-          <div class="remember"><input type="checkbox" id="checkbox" /><label>Lembre de mim</label>
-          </div><a href=""><span>Esqueceu sua senha?</span></a>
-          <button type="submit" id="submit">Entrar na conta</button>
-          <button class="login-google">
-           <img src="./img/logo_google.svg" alt="">Ou faça login com o google
+          <!-- Campo de senha -->
+          <label for="password">Senha:</label>
+          <input type="password" placeholder="0123456789" style="color: #656769;" />
+
+          <!-- Opções adicionais -->
+          <div class="options">
+
+            <!-- Checkbox lembrar login -->
+            <div class="remember">
+              <input type="checkbox" id="checkbox" />
+              <label>Lembre de mim</label>
+            </div>
+
+            <!-- Link para recuperação de senha -->
+            <a href="">
+              <span style="color: #1E9E6A;">Esqueceu sua senha?</span>
+            </a>
+
+          </div>
+
+          <!-- Botão principal de login -->
+          <button type="submit" id="submit">
+            Entrar na conta
           </button>
-          <div class="createAccount"><span>Não tem uma conta?</span>
-          <span></span><a href="#">Cadastre-se</a></span></div>
-          
+
+          <!-- Botão de login com Google -->
+          <button class="login-google">
+            <img src="./img/logo_google.svg" alt="Logo Google">
+            Ou faça login com o Google
+          </button>
+
+          <!-- Link para cadastro -->
+          <div class="createAccount">
+            <span>Não tem uma conta?</span>
+            <a href="#" style="color: #1E9E6A;">Cadastre-se</a>
+          </div>
+
         </form>
       </section>
     </div>
